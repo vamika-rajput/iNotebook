@@ -142,10 +142,12 @@ const Notes = ({ showAlert }) => {
             {/* Notes Section */}
             <div className="container my-3">
                 <h2>Your Notes</h2>
-                <div className="row my-3">
-                    {notes.length > 0 ? (
+                <div className="row my-3" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+                {notes.length > 0 ? (
                         notes.map((note) => (
-                            <NoteItem key={note._id} updateNote={updateNote} note={note} />
+                            
+                            
+                            <NoteItem key={note._id} style={{ flex: '1 1 calc(33.333% - 20px)', boxSizing: 'border-box' }} updateNote={updateNote} note={note} />
                         ))
                     ) : (
                         <p>No notes available</p>

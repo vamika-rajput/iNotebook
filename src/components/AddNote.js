@@ -69,20 +69,20 @@ const AddNote = ({ showAlert }) => {
             <h2>Add a New Note</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="title" className="form-label">Title</label>
-                    <input type="text" className="form-control" name="title" value={note.title} onChange={handleChange} />
+                    <label htmlFor="title" className="form-label">Title<span className="text-danger">  *</span></label>
+                    <input type="text" className="form-control form-control-sm w-75" name="title" value={note.title} onChange={handleChange} />
                     {errors.title && <small className="text-danger">{errors.title}</small>}
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="description" className="form-label">Description</label>
-                    <textarea className="form-control" name="description" value={note.description} onChange={handleChange} />
+                    <label htmlFor="description" className="form-label">Description<span className="text-danger">  *</span></label>
+                    <textarea className="form-control form-control-sm w-75" name="description" value={note.description} onChange={handleChange} />
                     {errors.description && <small className="text-danger">{errors.description}</small>}
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor="tag" className="form-label">Tag</label>
-                    <input type="text" className="form-control" name="tag" value={note.tag} onChange={handleChange} />
+                    <input type="text" className="form-control form-control-sm w-75" name="tag" value={note.tag} onChange={handleChange} />
                 </div>
 
                 <button type="submit" className="btn btn-primary">Add Note</button>

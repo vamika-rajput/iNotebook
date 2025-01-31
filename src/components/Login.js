@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import "./Login.css"; // Ensure this line is present
 
 const Login = () => {
     const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -35,6 +36,8 @@ const Login = () => {
     
 
     return (
+
+       
         
         <div className="container" style={{ maxWidth: '500px', margin: 'auto', marginTop: '50px' }}>
             <h2 className="text-center mb-4">Login</h2>

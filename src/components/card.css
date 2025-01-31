@@ -1,0 +1,28 @@
+/* Ensure all cards are the same height */
+.card {
+    display: flex;
+    flex-direction: column; /* Ensure content stretches vertically */
+    height: 100%;
+    margin-bottom: 15px; /* Add space between cards */
+    min-height: 300px; /* Optional: Set a minimum height */
+}
+
+/* Container for notes section to allow responsive layout */
+.container {
+    max-width: 1200px;  /* Control the container width */
+    margin: 0 auto;     /* Center the container */
+}
+
+/* Style for rows to allow the cards to wrap */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;  /* Adds space between each card */
+    justify-content: flex-start;
+}
+
+/* Optional: Ensure card titles and content stay aligned */
+.card-body {
+    flex-grow: 1; /* Allow the content to grow and fill the card */
+    overflow: hidden;
+}
